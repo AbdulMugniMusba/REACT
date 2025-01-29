@@ -1,9 +1,9 @@
-import CourseList from "./components/CourseList";
+import CourseListObject from "./components/CourseListObject";
 
 function App() {
   return (
     <div>
-      <CourseList />
+      <CourseListObject />
     </div>
   );
 }

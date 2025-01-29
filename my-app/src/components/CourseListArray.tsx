@@ -1,5 +1,5 @@
-import './CourseList.css'
-function CourseList() {
+import './CourseListArray.css'
+function CourseListArray() {
     const courses = [
         "Advanced Web Design",
         "React Frontend",
@@ -21,4 +21,4 @@ function CourseList() {
       );
     };
     
-    export default CourseList;
+    export default CourseListArray;
