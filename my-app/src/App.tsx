@@ -1,10 +1,17 @@
-import CourseListObject from "./components/CourseListObject";
-
+import "./App.css";
+import ProductsList from "./components/products.tsx";
+import CourseListObject from "./components/CourseListObject.tsx";
+import CarsList from "./components/cars.tsx";
 function App() {
   return (
+    
     <div>
-      <CourseListObject />
-    </div>
+       <ProductsList />
+        <CourseListObject />
+        <CarsList />
+
+      </div>
+
   );
 }
 
