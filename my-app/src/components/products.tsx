@@ -1,5 +1,5 @@
 function productslist() {
-  const products = [
+  let products = [
     {
       id: 1,
       title: "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
@@ -105,6 +105,9 @@ function productslist() {
       },
     },
   ];
+  
+
+  
   return (
     <div>
         <div className="row row-cols-1 row-cols-md-4 g-4">
@@ -119,6 +122,7 @@ function productslist() {
             <p className="card-text">
               <small className="text-muted">Rating: {product.rating.rate} ({product.rating.count} reviews)</small>
             </p>
+            <button type="button" className="btn btn-success">Buy Now</button>
         </div>
         </div>
         
