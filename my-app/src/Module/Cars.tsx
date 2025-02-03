@@ -6,3 +6,4 @@ interface Cars2{
     price: string;
   }
   export default Cars2;
+

@@ -1,10 +1,4 @@
-interface Course {
-    id: number;
-    name: string;
-    description: string;
-    price: number;
-    duration: number;
-}
+import Course from '../Module/Course';
 interface Props {
     courses: Course[];
 }
