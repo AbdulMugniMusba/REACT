@@ -6,7 +6,7 @@ const Toggle = () => {
   const [isOn, setIsOn] = useState(false);
   return (
     <div>
-      <h2>Status: {isOn == true ? "ON" : "OFF"}</h2>
+      <h2>Status: {isOn == true ? "on" : "off"}</h2>
       <div>
         <img
           src={isOn ? onnImg : offImg}
