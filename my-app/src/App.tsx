@@ -1,3 +1,4 @@
+// import { Children } from "react";
 import "./App.css";
 // import ProductsList from "./components/products.tsx";
 // import CourseListObject from "./components/CourseListObject.tsx";
@@ -34,9 +35,8 @@ function App() {
       {/* <Cars2></Cars2> */}
       {/* <Greeting>Hello BEFFELO</Greeting>
       // <Counter></Counter> */}
-        
-
-         <ArticleList />
+       <ArticleList></ArticleList>
+         
 
     </div>
   );
