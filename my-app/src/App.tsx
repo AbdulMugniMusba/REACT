@@ -7,6 +7,11 @@ import About from "./components/About";
 import Counter from "./components/Counter";
 import RecipeList from "./components/RecipeList";
 import ArticleList from "./components/ArticleList";
+import PostList from "./components/PostList";
+import ProductsList from "./components/ProductList";
+import PostDetails from "./components/PostDetails";
+import ProductList2 from "./components/ProductList2";
+import ProducrDetails2 from "./components/ProductDetails2";
 // import ProductsList from "./components/products.tsx";
 // import CourseListObject from "./components/CourseListObject.tsx";
 // import CarsList from "./components/cars.tsx";
@@ -29,33 +34,36 @@ import ArticleList from "./components/ArticleList";
 // import RecipeList from "./components/RecipeList.tsx";
 function App() {
   return (
-    // <div>
-    //   {/* <Courses courses={fetchCourses()} /> */}
+//     // <div>
+//     //   {/* <Courses courses={fetchCourses()} /> */}
        
-    //   {/* <Counter></Counter>
-    //   <SetName></SetName>
-    //   <UserProfile></UserProfile>
-    //   <Toggle></Toggle> */}
-    //   {/* <ProductsList></ProductsList> */}
-    //   {/* <CourseListObject></CourseListObject> */}
-    //   {/* <CarsList></CarsList> */}
-    //   {/* <LoginStatus></LoginStatus> */}
-    //   {/* <Vehicle></Vehicle> */}
-    //   {/* <Products2></Products2> */}
-    //   {/* <Cars2></Cars2> */}
-    //   {/* <Greeting>Hello BEFFELO</Greeting>
-    //   // <Counter></Counter> */}
-    //    {/* <ArticleList></ArticleList> */}
-    //      {/* <UserList /> */}
-    //  {/* <RecipeList /> */}
-    //  {/* <ProductsList /> */}
-    //  </div>
+//     //   {/* <Counter></Counter>
+//     //   <SetName></SetName>
+//     //   <UserProfile></UserProfile>
+//     //   <Toggle></Toggle> */}
+//     //   {/* <ProductsList></ProductsList> */}
+//     //   {/* <CourseListObject></CourseListObject> */}
+//     //   {/* <CarsList></CarsList> */}
+//     //   {/* <LoginStatus></LoginStatus> */}
+//     //   {/* <Vehicle></Vehicle> */}
+//     //   {/* <Products2></Products2> */}
+//     //   {/* <Cars2></Cars2> */}
+//     //   {/* <Greeting>Hello BEFFELO</Greeting>
+//     //   // <Counter></Counter> */}
+//     //    {/* <ArticleList></ArticleList> */}
+//     //      {/* <UserList /> */}
+//     //  {/* <RecipeList /> */}
+//     //  {/* <ProductsList /> */}
+//     //  </div>
 
-     
+  <div className="container">
     <Router>
-       <nav className="navbar navbar-expand-lg navbar-light bg-light">
+      <header className="m3-5">
+        <h1>React Demos</h1>
+      </header>
+      <nav className="navbar navbar-expand-lg bg-body-tertiary mb-5">
         <div className="container-fluid">
-          <Link className="navbar-brand" to="/">Navbar</Link>
+          <a className="navbar-brand" href="#">Navbar</a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>
@@ -64,42 +72,48 @@ function App() {
               <li className="nav-item">
                 <Link className="nav-link active" to="/">Home</Link>
               </li>
+              {/* <li className="nav-item">
+                <Link className="nav-link" to="/About">About Us</Link>
+              </li> */}
               <li className="nav-item">
-                <Link className="nav-link" to="/about">About</Link>
+                <Link className="nav-link" to="/">Products</Link>
               </li>
-              <li className="nav-item dropdown">
-                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  More
+              {/* <li className="nav-item dropdown">
+                <a className="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown link
                 </a>
-                <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <ul className="dropdown-menu">
                   <li><Link className="dropdown-item" to="/Counter">Counter</Link></li>
-                  <li><Link className="dropdown-item" to="/RecipeList">RecipeList</Link></li>
+                  <li><Link className="dropdown-item" to="/RecipeList">Recipes</Link></li>
                   <li><Link className="dropdown-item" to="/ArticleList">ArticleList</Link></li>
+                  
+                   
+
+
                 </ul>
-              </li>
-            </ul>
+              </li> */}
+            </ul> 
           </div>
         </div>
       </nav>
-
-
-
-       <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/Counter" element={<Counter/>} />
-          <Route path="/RecipeList" element={<RecipeList/>} />
-          <Route path="/ArticleList" element={<ArticleList/>} />
-    </Routes>
-
-
-
-
-
+      <Routes>
+        {/* <Route path="/" element={<Home />}></Route>
+        <Route path="/About" element={<About />}></Route> */}
+        {/* <Route path="/Count" element={<Counter />}></Route>
+        <Route path="/ArticleList" element={<ArticleList />}></Route>
+        <Route path="/Recipes" element={<RecipeList />}></Route> */}
+         {/* <Route path="/" element={<PostList />} />
+         <Route path="/posts/:id" element={<PostDetails />} /> */}
+          <Route path="/" element={<ProductList2 />} />
+          <Route path="/products/:id" element={<ProducrDetails2 />} />
+      </Routes>
     </Router>
+
+  </div>
+
 
   );
 }
-
+     
 
 export default App;
