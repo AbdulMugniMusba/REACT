@@ -1,51 +1,58 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-interface Products {
-    id: string;
-    title: string;
-    
-   
+
+interface Product {
+  id: string;
+  title: string;
+  thumbnail: string;
 }
 
-function ProductList2() {    
-    const [products,setproducts] = useState<Products[]>([]);
-    const [error, setError] = useState<string | null>(null);
+function ProductList2() {
+  const [products, setProducts] = useState<Product[]>([]);
+  const [error, setError] = useState<string | null>(null);
 
-    const fetchproducts = async () => {
-        const response = await fetch("https://dummyjson.com/products");
-        if (response.ok == false) {
-            setError("An error occurred");
-        }
-        else {
-          const data = await response.json();
-        setproducts(data.products);  
-        }
-    };
-    useEffect(() => {
-        fetchproducts();
-    }, []);
-    if (error !== null) {
-        return <h1 className="text-danger">{error}</h1>;
+  const fetchProducts = async () => {
+    const response = await fetch("https://dummyjson.com/products");
+    if (!response.ok) {
+      setError("An error occurred");
+    } else {
+      const data = await response.json();
+      setProducts(data.products);
     }
+  };
 
+  useEffect(() => {
+    fetchProducts();
+  }, []);
 
-    return (
-        <div className="container">
-            <h1 className="text-center">Product List</h1>
-        <div className="row row-cols-4 row-cols-md-2 g-4">
-      {products.map((products,) => (
-        <div key={products.id}>
-          <h5 className="card-title">{products.title}</h5>
+  if (error !== null) {
+    return <h1 className="text-danger">{error}</h1>;
+  }
 
-          <Link to={`/products/${products.id}`} > View Product </Link>
-          
-
-        </div>
-        
+  return (
+    <div className="container">
+      <h1 className="text-center">Product List</h1>
+      <div className="row row-cols-1 row-cols-md-3 g-4">
+        {products.map((product) => (
+          <div key={product.id} className="col">
+            <Link to={`/products/${product.id}`} >
+              <div className="card h-100">
+                <img
+                  src={product.thumbnail}
+                  className="card-img-top"
+                  alt={product.title}
+                />
+                <div className="card-body">
+                  <h5 className="card-title">{product.title}</h5>
+                  <p className="btn btn-primary"> view details</p>
+                </div>
+              </div>
+            </Link>
+          </div>
         ))}
-        </div>
-        </div>
-    );
-
+      </div>
+    </div>
+  );
 }
- export default ProductList2;
+
+export default ProductList2;

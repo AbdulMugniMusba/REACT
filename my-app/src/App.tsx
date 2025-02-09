@@ -12,6 +12,8 @@ import ProductsList from "./components/ProductList";
 import PostDetails from "./components/PostDetails";
 import ProductList2 from "./components/ProductList2";
 import ProducrDetails2 from "./components/ProductDetails2";
+import PostDetailsSearch from "./components/PostDetailsSearch";
+import PostListSearch from "./components/PostListSearch";
 // import ProductsList from "./components/products.tsx";
 // import CourseListObject from "./components/CourseListObject.tsx";
 // import CarsList from "./components/cars.tsx";
@@ -103,9 +105,9 @@ function App() {
         <Route path="/ArticleList" element={<ArticleList />}></Route>
         <Route path="/Recipes" element={<RecipeList />}></Route> */}
          {/* <Route path="/" element={<PostList />} />
-         <Route path="/posts/:id" element={<PostDetails />} /> */}
-          <Route path="/" element={<ProductList2 />} />
-          <Route path="/products/:id" element={<ProducrDetails2 />} />
+          <Route path="/posts/:id" element={<PostDetails />} /> */}
+          <Route path="/" element={<PostListSearch />} />
+          <Route path="/posts/:id" element={<PostDetailsSearch />} /> 
       </Routes>
     </Router>
 
