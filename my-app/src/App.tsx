@@ -14,6 +14,7 @@ import ProductList2 from "./components/ProductList2";
 import ProducrDetails2 from "./components/ProductDetails2";
 import PostDetailsSearch from "./components/PostDetailsSearch";
 import PostListSearch from "./components/PostListSearch";
+import ProductDetails2 from "./components/ProductDetails2";
 // import ProductsList from "./components/products.tsx";
 // import CourseListObject from "./components/CourseListObject.tsx";
 // import CarsList from "./components/cars.tsx";
@@ -61,7 +62,6 @@ function App() {
   <div className="container">
     <Router>
       <header className="m3-5">
-        <h1>React Demos</h1>
       </header>
       <nav className="navbar navbar-expand-lg bg-body-tertiary mb-5">
         <div className="container-fluid">
@@ -106,8 +106,10 @@ function App() {
         <Route path="/Recipes" element={<RecipeList />}></Route> */}
          {/* <Route path="/" element={<PostList />} />
           <Route path="/posts/:id" element={<PostDetails />} /> */}
-          <Route path="/" element={<PostListSearch />} />
-          <Route path="/posts/:id" element={<PostDetailsSearch />} /> 
+          {/* <Route path="/" element={<PostListSearch />} />
+          <Route path="/posts/:id" element={<PostDetailsSearch />} />  */}
+          <Route path="/" element={<ProductList2 />} />
+          <Route path="/products/:id" element={<ProductDetails2 />} /> 
       </Routes>
     </Router>
 
