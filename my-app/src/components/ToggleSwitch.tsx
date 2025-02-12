@@ -2,7 +2,7 @@ import { useState } from "react";
 import onnImg from "../assets/onn.jpg";
 import offImg from "../assets/off.jpg";
 
-const Toggle = () => {
+const ToggleSwitch = () => {
   const [isOn, setIsOn] = useState(false);
   return (
     <div>
@@ -18,4 +18,4 @@ const Toggle = () => {
     </div>
   );
 };
-export default Toggle;
+export default ToggleSwitch;
